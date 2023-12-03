@@ -4,15 +4,20 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { CounterProvider } from './Context/Counter';
+import { CartProvider } from './Context/CartContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <CounterProvider>
+    {/* <CounterProvider> */}
 {/* all the components in App will be rendered inside the contextProvider and have the access */}
 {/* App here is the children of CounterProvider */}
-      <App/> 
-    </CounterProvider>
+
+    <CartProvider> 
+    <App/> 
+    </CartProvider>
+
+    {/* </CounterProvider> */}  
   </React.StrictMode>
 );
 
